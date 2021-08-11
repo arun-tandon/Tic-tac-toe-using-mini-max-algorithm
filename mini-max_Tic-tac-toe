@@ -87,6 +87,7 @@ def ai_decision():
 def main_call():
     print("Let's play tic tac toe !")
     print_board()
+    flag=0
     while (not is_empty()):
         print("Enter a valid move from (1-9)")
         pos=int(input())
@@ -98,6 +99,7 @@ def main_call():
             continue
         
         if(is_winner(board,'O')):
+            flag=1
             print("you won!")
             break
         
@@ -107,11 +109,12 @@ def main_call():
         print_board()
 
         if(is_winner(board,'O')):
+            flag=1
             print("you loose !")
             break
 
 
-    if(is_empty()):
+    if(is_empty() and flag==0):
         print('Tie')
 
 main_call()
