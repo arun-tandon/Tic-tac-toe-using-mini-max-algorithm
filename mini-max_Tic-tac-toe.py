@@ -108,7 +108,7 @@ def main_call():
         ai_decision()
         print_board()
 
-        if(is_winner(board,'O')):
+        if(is_winner(board,'X')):
             flag=1
             print("you loose !")
             break
